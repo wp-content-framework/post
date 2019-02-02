@@ -15,7 +15,7 @@
 ``` composer require wp-content-framework/post ```  
 
 ## 依存モジュール
-* [common](https://github.com/wp-content-framework/common)  
+* [core](https://github.com/wp-content-framework/core)  
 
 # Author
 
