@@ -14,9 +14,6 @@
 
 ``` composer require wp-content-framework/post ```  
 
-## 依存モジュール
-* [core](https://github.com/wp-content-framework/core)  
-
 # Author
 
 [GitHub (Technote)](https://github.com/technote-space)  
