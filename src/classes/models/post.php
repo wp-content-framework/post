@@ -173,7 +173,7 @@ class Post implements \WP_Framework_Core\Interfaces\Singleton, \WP_Framework_Cor
 SQL;
 		$results = $wpdb->get_results( $wpdb->prepare( $query, $this->get_meta_key( $key ), $value ) );
 
-		return $this->apply_filters( 'find_post_meta', $this->app->utility->array_pluck( $results, 'post_id' ), $key, $value );
+		return $this->apply_filters( 'find_post_meta', $this->app->array->pluck( $results, 'post_id' ), $key, $value );
 	}
 
 	/**
@@ -204,7 +204,7 @@ SQL;
 SQL;
 		$results = $wpdb->get_results( $wpdb->prepare( $query, $this->get_meta_key( $key ) ) );
 
-		return $this->apply_filters( 'get_meta_post_ids', $this->app->utility->array_pluck( $results, 'post_id' ), $key );
+		return $this->apply_filters( 'get_meta_post_ids', $this->app->array->pluck( $results, 'post_id' ), $key );
 	}
 
 	/**
