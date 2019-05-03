@@ -131,6 +131,7 @@ class Post implements \WP_Framework_Core\Interfaces\Singleton, \WP_Framework_Cor
 	 * @param string $value
 	 */
 	public function set_all( $key, $value ) {
+		/** @noinspection SqlResolve */
 		$query = $this->wpdb()->prepare( "UPDATE {$this->get_wp_table('postmeta')} SET meta_value = %s WHERE meta_key LIKE %s", $value, $this->get_meta_key( $key ) );
 		$this->wpdb()->query( $query );
 	}
@@ -139,6 +140,7 @@ class Post implements \WP_Framework_Core\Interfaces\Singleton, \WP_Framework_Cor
 	 * @param string $key
 	 */
 	public function delete_all( $key ) {
+		/** @noinspection SqlResolve */
 		$query = $this->wpdb()->prepare( "DELETE FROM {$this->get_wp_table('postmeta')} WHERE meta_key LIKE %s", $this->get_meta_key( $key ) );
 		$this->wpdb()->query( $query );
 	}
@@ -168,6 +170,7 @@ class Post implements \WP_Framework_Core\Interfaces\Singleton, \WP_Framework_Cor
 	 * @return array
 	 */
 	public function find( $key, $value ) {
+		/** @noinspection SqlResolve */
 		$query   = <<< SQL
 			SELECT * FROM {$this->get_wp_table( 'postmeta' )}
 			WHERE meta_key LIKE %s
@@ -199,6 +202,7 @@ SQL;
 	 * @return array
 	 */
 	public function get_meta_post_ids( $key ) {
+		/** @noinspection SqlResolve */
 		$query   = <<< SQL
 		SELECT post_id FROM {$this->get_wp_table( 'postmeta' )}
 		WHERE meta_key LIKE %s
@@ -212,6 +216,7 @@ SQL;
 	 * uninstall
 	 */
 	public function uninstall() {
+		/** @noinspection SqlResolve */
 		$query = $this->wpdb()->prepare( "DELETE FROM {$this->get_wp_table('postmeta')} WHERE meta_key LIKE %s", $this->get_post_prefix() . '%' );
 		$this->wpdb()->query( $query );
 	}
