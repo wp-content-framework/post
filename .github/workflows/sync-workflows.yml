@@ -20,7 +20,7 @@ jobs:
             mkdir -p .github/workflows/.tmp
             git clone --depth=1 https://github.com/technote-space/github-actions-workflows.git .github/workflows/.tmp/workflows
 
-            bash .github/workflows/.tmp/workflows/wp-framework/copy.sh php-lint
+            bash .github/workflows/.tmp/workflows/wp-framework/copy.sh php-test
 
             rm -rdf .github/workflows/.tmp
           COMMIT_MESSAGE: 'chore: sync workflows'
