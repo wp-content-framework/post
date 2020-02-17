@@ -7,14 +7,18 @@
 
 [WP Content Framework](https://github.com/wp-content-framework/core) のモジュールです。
 
+## Table of Contents
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**
+<details>
+<summary>Details</summary>
 
 - [要件](#%E8%A6%81%E4%BB%B6)
 - [インストール](#%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB)
 - [Author](#author)
 
+</details>
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 # 要件
